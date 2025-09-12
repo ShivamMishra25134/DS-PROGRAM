@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int arr[] = {12, 22, 45, 145, 12, 34, 56, 78};
+int count = 8;
+
+int LinearSearch(int n) {
+    for (int i = 0; i < count; i++) {
+        if (arr[i] == n) {
+            return i;
+        }
+    }
+    return -1; // Not found
+}
+
+int main() {
+    int key = 145;
+    int result = LinearSearch(key);
+
+    if (result != -1)
+        printf("Element %d found at index %d\n", key, result);
+    else
+        printf("Element %d not found\n", key);
+
+    return 0;
+}
